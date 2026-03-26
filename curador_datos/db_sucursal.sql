@@ -57,5 +57,12 @@ GRANT SELECT, UPDATE, INSERT on sucursal.equipos to 'guillermo'@'localhost';
 CREATE USER 'juan'@'localhost' IDENTIFIED by 'juan';
 GRANT ALL PRIVILEGES on sucusal.equipos to 'juan'@'localhost';
 
-SHOW GRANTS FOR 'brenda'@'localhost'; -- revisar los privilegios que tiene el usuario--
+SHOW GRANTS FOR 'juan'@'localhost'; -- revisar los privilegios que tiene el usuario--
+
+-- Quita todos los permisos sobre la base de datos y la tabla
+REVOKE SELECT, INSERT, UPDATE ON sucursal.equipos FROM 'guillermo'@'localhost';
+
+GRANT ALL PRIVILEGES on sucusal.* to 'juan'@'localhost';
+
+
 
